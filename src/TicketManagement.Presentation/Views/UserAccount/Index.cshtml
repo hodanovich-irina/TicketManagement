@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.IdentityData.EditUser
+<div class="text-center">
+    <h1 class="display-4">@Localizer["PersonalArea"]</h1>
+    <h6>@Model.Email</h6>
+    <div class="bg-light"><a class="btn-light text-dark" asp-action="Index" asp-controller="home">@Localizer["Events"]</a></div>
+</div>
+<div class="modal-content h-100 w-100">
+    <div class="modal-header">
+        <h4>@Model.Surname @Model.Name @Model.Patronymic</h4>
+    </div>
+    <div class="modal-body">
+        <dl class="dl-horizontal">
+            <dt>@Localizer["Year"]:</dt>
+            <dd>@Model.Year</dd>
+
+
+            @if (@Localizer["MoneyType"].Value.Equals("BYN"))
+            {
+                <dt>@Localizer["Balance"]:</dt>
+                <dd>~ @(Convert.ToDouble(Model.Balance) * 2.5) @Localizer["MoneyType"]</dd>
+            }
+            else if (@Localizer["MoneyType"].Value.Equals("RUB"))
+            {
+                <dt>@Localizer["Balance"]:</dt>
+                <dd>~ @(Convert.ToDouble(Model.Balance) * 76.6) @Localizer["MoneyType"]</dd>
+            }
+            else
+            {
+                <dt>@Localizer["Balance"]:</dt>
+                <dd>@Model.Balance @Localizer["MoneyType"]</dd>
+            }
+
+            <dt>@Localizer["Language"]:</dt>
+            <dd>@Model.Language</dd>
+
+            <dt>@Localizer["TimeZone"]:</dt>
+            <dd>@Model.TimeZoneId</dd>
+
+            <dt>@Localizer["Actions"]:</dt>
+            <dd>
+                <div class="btn btn-dark"><a class="text-white" asp-action="Edit" asp-controller="UserAccount" asp-route-id="@Model.Id">@Localizer["EditProfile"]</a></div>
+                <div class="btn btn-dark"><a class="text-white" asp-action="AddMoney" asp-controller="UserAccount" asp-route-id="@Model.Id">@Localizer["TopUpBalance"]</a></div>
+                <div class="btn btn-dark"><a class="text-white" asp-action="SeePurchaseHistory" asp-controller="UserAccount" asp-route-id="@Model.Id">@Localizer["PurchaseHistory"]</a></div>
+                <div class="btn btn-dark"><a class="text-white" asp-controller="User" asp-action="ChangePassword" asp-route-id="@Model.Id">@Localizer["ChangePassword"]</a></div>
+            </dd>
+        </dl>
+    </div>
+</div>

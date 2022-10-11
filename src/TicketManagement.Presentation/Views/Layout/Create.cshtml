@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.LayoutCreateViewModel
+
+<form asp-action="create" asp-controller="layout">
+
+    <div>
+        <label asp-for="Name">@Localizer["Name"]</label>
+        <input type="text" asp-for="Name" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Description">@Localizer["Description"]</label>
+        <input type="text" asp-for="Description" required maxlength="250"/>
+    </div>
+    <div>
+        <label asp-for="VenueId">@Localizer["Venue"]</label>
+        <select asp-for="VenueId" asp-items="@(new SelectList(Model.Venues, "Id", "Name"))"></select><br />
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value="@Localizer["Add"]" />
+    </div>
+</form>

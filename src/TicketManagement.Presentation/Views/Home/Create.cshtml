@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.EventCreateViewModel
+@{
+    ViewBag.Title = @Localizer["AddEvent"];
+}
+
+<form asp-action="create" asp-controller="home">
+    <div>
+        <label asp-for="Name">@Localizer["Name"]:</label>
+        <input type="text" asp-for="Name" required />
+    </div>
+    <div>
+        <label asp-for="Description">@Localizer["Description"]</label>
+        <input type="text" asp-for="Description" required maxlength="250"/>
+    </div>
+    <div>
+        <label asp-for="ShowTime">@Localizer["ShowTime"]</label>
+        <input type="time" asp-for="ShowTime" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="DateStart">@Localizer["DateStart"]</label>
+        <input type="date" asp-for="DateStart" required />
+    </div>
+    <div>
+        <label asp-for="DateEnd">@Localizer["DateEnd"]</label>
+        <input type="date" asp-for="DateEnd" required />
+    </div>
+    <div>
+        <label asp-for="ImageURL">@Localizer["URL"]</label>
+        <input type="text" asp-for="ImageURL" required />
+    </div>
+    <div>
+        <label asp-for="LayoutId">@Localizer["Layout"]</label>
+        <select asp-for="LayoutId" asp-items="@(new SelectList(Model.Layouts, "Id", "Name"))"></select><br />
+    </div>
+    <div>
+        <label asp-for="BaseAreaPrice" class="control-label">@Localizer["TicketPrice"]</label>
+        <input type="number" asp-for="BaseAreaPrice" value="0" required min="0"  max="1000"/>
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value=@Localizer["Add"] />
+    </div>
+</form>

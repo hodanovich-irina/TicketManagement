@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Area was null" xml:space="preserve">
+    <value>Зона была нулявая</value>
+  </data>
+  <data name="Coordinates must be more than zero" xml:space="preserve">
+    <value>Каардынаты павінны быць больш за нуль</value>
+  </data>
+  <data name="Description of area must be less than 200 and must be not null" xml:space="preserve">
+    <value>Апісанне залы павінна быць менш за 200 і не павінна быць нулявой</value>
+  </data>
+  <data name="Description of event must be not null" xml:space="preserve">
+    <value>Апісанне падзеі не павінно быць нулявым</value>
+  </data>
+  <data name="Description of layout must be less than 120 sumbols and must be not null" xml:space="preserve">
+    <value>Апісанне залы павінно быць менш за 120 знакаў і не павінна быць нулявой</value>
+  </data>
+  <data name="Event area was null" xml:space="preserve">
+    <value>Зона мерапрыемства была нулявая</value>
+  </data>
+  <data name="Event seat was null" xml:space="preserve">
+    <value>Сядушка для мерапрыемства была нулевой</value>
+  </data>
+  <data name="Event was null" xml:space="preserve">
+    <value>Мерапрыемства было нулявым</value>
+  </data>
+  <data name="Id must be more than zero" xml:space="preserve">
+    <value>Ідэнтыфікатар павінен быць больш за нуль</value>
+  </data>
+  <data name="Image url of event must be not null" xml:space="preserve">
+    <value>URL-адрас малюнка падзеі не павінен быць нулявым</value>
+  </data>
+  <data name="Incorrect data" xml:space="preserve">
+    <value>Няправільныя дадзеныя</value>
+  </data>
+  <data name="Layout was null" xml:space="preserve">
+    <value>Зала была нулявой</value>
+  </data>
+  <data name="Name of event must be less than 120 sumbols and must be not null" xml:space="preserve">
+    <value>Назва падзеі павінна быць менш за 120 і не павінна быць нулявой</value>
+  </data>
+  <data name="Name of layout must be less than 120 sumbols and must be not null" xml:space="preserve">
+    <value>Назва залы павінна быць менш за 120 знакаў і не павінна быць нулявой</value>
+  </data>
+  <data name="No access" xml:space="preserve">
+    <value>Доступ забаронены</value>
+  </data>
+  <data name="Number and row of seat must be more than zero" xml:space="preserve">
+    <value>Нумар і шэраг сядзенняў павінны быць больш за нуль</value>
+  </data>
+  <data name="Phone of venue must be less than 30" xml:space="preserve">
+    <value>Тэлефон месца правядзення павінен быць менш за 30</value>
+  </data>
+  <data name="Price must be more than zero" xml:space="preserve">
+    <value>Цана павінна быць больш за нуль</value>
+  </data>
+  <data name="Seat was null" xml:space="preserve">
+    <value>Сядзенне было нулявым</value>
+  </data>
+  <data name="Show time of event must be more than zero" xml:space="preserve">
+    <value>Час паказу падзеі павінен быць больш за нуль</value>
+  </data>
+  <data name="Ticket was null" xml:space="preserve">
+    <value>Білет быў нулявы</value>
+  </data>
+  <data name="User was null" xml:space="preserve">
+    <value>Карыстальнік быў нуль</value>
+  </data>
+  <data name="Warning! Events from the file are not added or not all are added..." xml:space="preserve">
+    <value>Папярэджанне! Падзеі з файла не дададзены ці дададзены не ўсе...</value>
+  </data>
+  <data name="You can't add a new area. This area description alredy exist in this layout" xml:space="preserve">
+    <value>Вы не можаце дадаць новую зону. Гэта апісанне зоны ўжо існуе ў гэтай зале.</value>
+  </data>
+  <data name="You can't add a new layuot. Layout with this name alredy exist in this venue" xml:space="preserve">
+    <value>Вы не можаце дадаць новую залу. Зала з такой назвай ужо існуе ў гэтым месцы</value>
+  </data>
+  <data name="You can't add a new seat. Seat with this row and number alredy exsist in this area" xml:space="preserve">
+    <value>Вы не можаце дадаць новае месца. Месца з гэтым шэрагам і нумарам ужо існуюць у гэтай вобласці</value>
+  </data>
+  <data name="You can't add a new venue. This venue name alredy exist" xml:space="preserve">
+    <value>Вы не можаце дадаць новае месца. Гэтая назва месца ўжо існуе</value>
+  </data>
+  <data name="You can't buy ticket for event. This seat is booked" xml:space="preserve">
+    <value>Вы не можаце купіць квіток на мерапрыемства. Гэта месца забраніравана</value>
+  </data>
+  <data name="You can't create area for event without event" xml:space="preserve">
+    <value>Вы не можаце стварыць зону для мерапрыемства без мерапрыемства</value>
+  </data>
+  <data name="You can't create event in tha past!" xml:space="preserve">
+    <value>Вы не можаце стварыць падзею ў мінулым!</value>
+  </data>
+  <data name="You can't create event. Date of end should be more than date of start" xml:space="preserve">
+    <value>Вы не можаце стварыць падзею. Дата заканчэння павінна быць больш, чым дата пачатку</value>
+  </data>
+  <data name="You can't create event. Event on this period alredy exsist in venue!" xml:space="preserve">
+    <value>Вы не можаце стварыць падзею. Мерапрыемства ў гэты перыяд ужо існуе на месцы!</value>
+  </data>
+  <data name="You can't create seat for event without event" xml:space="preserve">
+    <value>Вы не можаце стварыць месца для мерапрыемства без мерапрыемства</value>
+  </data>
+  <data name="You can't delete booked seat" xml:space="preserve">
+    <value>Вы не можаце выдаліць забраніраванае месца</value>
+  </data>
+  <data name="You can't delete event area. Any seats booked" xml:space="preserve">
+    <value>Вы не можаце выдаліць вобласць падзей. Забраніраваныя някаторыя месцы</value>
+  </data>
+  <data name="You can't delete event. Any seats booked" xml:space="preserve">
+    <value>Вы не можаце выдаліць падзею. Забраніраваныя някаторыя месцы</value>
+  </data>
+  <data name="You can't delete layout. Any seats booked" xml:space="preserve">
+    <value>Вы не можаце выдаліць зал. Забраніраваныя някаторыя месцы</value>
+  </data>
+  <data name="You can't delete seat. Incorrect data" xml:space="preserve">
+    <value>Вы не можаце выдаліць месца. Няправільныя дадзеныя</value>
+  </data>
+  <data name="You can't delete venue. Any seats booked" xml:space="preserve">
+    <value>Вы не можаце выдаліць месца правядзення. Забраніраваныя някаторыя месцы</value>
+  </data>
+  <data name="You can't edit a layuot. Layout with this name alredy exist in this venue" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць залу. Зала з такой назвай ужо існуе ў гэтым месцы</value>
+  </data>
+  <data name="You can't edit event in tha past!" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць падзею ў мінулым!</value>
+  </data>
+  <data name="You can't edit event. Date of end should be more than date of start" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць падзею. Дата заканчэння павінна быць больш, чым дата пачатку</value>
+  </data>
+  <data name="You can't edit event. Event on this period alredy exsist in venue!" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць падзею. Мерапрыемства ў гэты перыяд ужо існуе на месцы!</value>
+  </data>
+  <data name="You can't edit this area. This area description alredy exist in this layout" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць гэтую зону. Гэта апісанне зоны ўжо існуе ў гэтай зале</value>
+  </data>
+  <data name="You can't edit this seat. Seat with this row and number alredy exist in this area" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць гэта месца. Месца з гэтым шэрагам і нумарам ужо існуе ў гэтай вобласці</value>
+  </data>
+  <data name="You can't edit this seat. Seat with this row and number alredy exist in this event area" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць гэта месца. Месца з гэтым шэрагам і нумарам ужо існуе ў гэтай вобласці падзей</value>
+  </data>
+  <data name="You can't edit ticket. If you want buy any ticket, delete this ticket and add another one." xml:space="preserve">
+    <value>Вы не можаце рэдагаваць білет. Калі вы хочаце купіць які-небудзь білет, выдаліце ​​гэты білет і дадайце яшчэ адзін.</value>
+  </data>
+  <data name="You can't edit venue. This venue name alredy exist" xml:space="preserve">
+    <value>Вы не можаце рэдагаваць месца правядзення. Гэтая назва месца ўжо існуе</value>
+  </data>
+</root>

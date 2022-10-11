@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.TicketViewModel
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Localizer["DateOfPurchase"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfPurchase)
+        </dd>
+        <dt>@Localizer["Price"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Ticket" asp-action="Delete" method="post">
+            <div>
+                <input class="btn btn-outline-danger" type="submit" value="@Localizer["Refuse"]" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Dto.VenueDto
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Localizer["Name"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>@Localizer["Address"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>@Localizer["Description"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>@Localizer["Phone"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="venue" asp-action="delete" method="post">
+            <div>
+                <input class="btn btn-outline-danger" type="submit" value="@Localizer["Delete"]" />
+            </div>
+        </form>
+    </div>
+</div>

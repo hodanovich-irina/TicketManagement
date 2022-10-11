@@ -1,0 +1,3 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localize
+<h2>@Localize[ViewData["Message"].ToString()]</h2>

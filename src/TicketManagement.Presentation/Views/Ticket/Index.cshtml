@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<TicketManagement.Presentation.Models.TicketViewModel>
+<table class="table bg-white">
+    <tr><td>@Localizer["DateOfPurchase"]</td><td>@Localizer["Price"]</td><td>@Localizer["Row"]</td><td>@Localizer["Place"]</td><td>@Localizer["User"]</td><td>@Localizer["Event"]</td><td>@Localizer["EventPeriod"]</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DateOfPurchase</td>
+            <td>@item.Price</td>
+            <td>@item.Row</td>
+            <td>@item.Number</td>
+            <td>@item.UserName</td>
+            <td>@item.EventName</td>
+            <td>@item.EventDateStart.ToShortDateString() - @item.EventDateEnd.ToShortDateString()</td>
+            @if (User.IsInRole("user") && (item.EventDateEnd - DateTime.Now).Days > 0 )
+            {
+                <td><a class="btn btn-outline-danger" asp-action="Delete" asp-controller="ticket" asp-route-id="@item.Id">@Localizer["Refuse"]</a></td>
+            }
+        </tr>
+    }
+
+</table>

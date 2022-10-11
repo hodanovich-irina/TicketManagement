@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.LayoutCreateViewModel
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Localizer["Name"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>@Localizer["Description"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>@Localizer["Venue"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.VenueName)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Layout" asp-action="Delete" method="post">
+            <div>
+                <input class="btn btn-dark" type="submit" value="@Localizer["Delete"]" />
+            </div>
+        </form>
+    </div>
+</div>

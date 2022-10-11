@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.IdentityData.EditUser
+<div>
+    @if (@Localizer["MoneyType"].Value.Equals("BYN"))
+    {
+        <h4 class="display-4">@Localizer["Balance"]: @Math.Round((Convert.ToDouble(Model.Balance) * 2.5),2) @Localizer["MoneyType"]</h4>
+    }
+    else if (@Localizer["MoneyType"].Value.Equals("RUB"))
+    {
+        <h4 class="display-4">@Localizer["Balance"]: @Math.Round((Convert.ToDouble(Model.Balance) * 76.6), 2) @Localizer["MoneyType"]</h4>
+    }
+    else
+    {
+        <h4 class="display-4">@Localizer["Balance"]: @Model.Balance @Localizer["MoneyType"]</h4>
+    }
+</div>
+<form asp-action="addMoney" asp-controller="UserAccount">
+    <div asp-validation-summary="All"></div>
+    <div style="display:none;">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div>
+        <label asp-for="Balance" class="control-label">@Localizer["TopUp"]</label>
+        <input type="number" asp-for="Balance" value="0" min="0"  max="10000"/> $
+    </div>
+    <div>
+        <input type="submit" value="@Localizer["TopUpBalance"]" class="btn btn-dark" />
+    </div>
+</form>

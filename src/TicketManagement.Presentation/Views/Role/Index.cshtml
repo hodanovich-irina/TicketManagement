@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<string>
+
+<div class="text-center">
+    <h1 class="display-4">@Localizer["RoleList"]</h1>
+</div>
+<table class="table bg-white">
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td>@role</td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@role" method="post">
+                    <button type="submit" class="btn btn-outline-danger">
+                        @Localizer["Delete"]
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<div class="btn btn-dark"><a class="text-white" asp-action="UserList">@Localizer["UserList"]</a></div>

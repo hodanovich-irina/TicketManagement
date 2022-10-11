@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<TicketManagement.Presentation.Models.EventAreaViewModel>
+<table class="table bg-white">
+    <tr><td>@Localizer["CoordinateX"]</td><td>@Localizer["CoordinateY"]</td><td>@Localizer["Description"]</td><td>@Localizer["Event"]</td><td>@Localizer["TicketPrice"]</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CoordX</td>
+            <td>@item.CoordY</td>
+            <td>@item.Description</td>
+            <td>@item.EventName</td>
+            <td>@item.Price</td>
+            <td>
+                <div class="btn btn-dark"><a class="text-light" asp-action="Index" asp-controller="EventSeat" asp-route-id="@item.Id">@Localizer["Seats"]</a></div>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@model TicketManagement.Presentation.IdentityData.CreateUser
+<form asp-action="Create" asp-controller="User">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Email">@Localizer["Email"]</label>
+        <input type="text" asp-for="Email" maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Password">@Localizer["Password"]</label>
+        <input type="password" asp-for="Password" maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Surname">@Localizer["Surname"]</label>
+        <input type="text" asp-for="Surname" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Name">@Localizer["Name"]</label>
+        <input type="text" asp-for="Name" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Patronymic">@Localizer["Patronymic"]</label>
+        <input type="text" asp-for="Patronymic" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Year">@Localizer["Year"]</label>
+        <input type="number" asp-for="Year" required min="1900" maxlength="4"/>
+    </div>
+    <div>
+        <label asp-for="TimeZoneId">@Localizer["TimeZone"]</label>
+        <select asp-for="TimeZoneId" asp-items="@(new SelectList(TimeZoneInfo.GetSystemTimeZones().Select(x=>x.Id)))"></select><br />
+    </div>
+    <div>
+        <label asp-for="Language">@Localizer["Language"]</label>
+        <select asp-for="Language" asp-items="@(new SelectList(LocOptions.Value.SupportedUICultures.Select(x=>x.Name)))"></select><br />
+    </div>
+    <div style="display:none;">
+        <label asp-for="Balance" class="control-label"></label>
+        <input type="number" asp-for="Balance" value="0" />
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value="@Localizer["Add"]"/>
+    </div>
+</form>

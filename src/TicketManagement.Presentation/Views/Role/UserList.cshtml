@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model IEnumerable<TicketManagement.Presentation.IdentityData.User>
+<h2>@Localizer["UserList"]</h2>
+<table class="table bg-white">
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>
+                <a class="btn btn-dark" asp-action="Edit" asp-route-userid="@user.Id">@Localizer["AccessRights"]</a>
+            </td>
+        </tr>
+    }
+</table>

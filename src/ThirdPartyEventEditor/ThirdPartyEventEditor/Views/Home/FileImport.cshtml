@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ThirdPartyEventEditor.Models.ThirdPartyEvent>
+
+@{ ViewBag.Title = "FileImport"; }
+
+<h2>FileImport</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form asp-action="fileimport" method="post" asp-controller="home">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PosterImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LayoutName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        <input type="checkbox" name="selectId" value="@item.Id" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EndDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td width="300px">
+        <img class="img-thumbnail" src="@item.PosterImage" alt="" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VenueName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LayoutName)
+    </td>
+</tr>}
+
+    </table>
+    <div class="form-group">
+        <label asp-for="fileName">File to save</label>
+        <input type="text" name="fileName" required />
+    </div>
+    <p><input type="submit" value="Отправить" /></p>
+</form>

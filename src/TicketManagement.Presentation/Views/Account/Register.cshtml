@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@model TicketManagement.Presentation.IdentityData.Register
+
+<h2>@Localizer["Registration"]</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email">@Localizer["Email"]</label><br />
+        <input asp-for="Email" required maxlength="100"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Year">@Localizer["Year"]</label><br />
+        <input asp-for="Year" required min="1900" max="2200"/>
+    </div>
+    <div>
+        <label asp-for="Name">@Localizer["Name"]</label><br />
+        <input asp-for="Name" required maxlength="50"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Surname">@Localizer["Surname"]</label><br />
+        <input asp-for="Surname" required maxlength="50"/>
+        <span asp-validation-for="Surname" maxlength="50"></span>
+    </div>
+    <div>
+        <label asp-for="Patronymic">@Localizer["Patronymic"]</label><br />
+        <input asp-for="Patronymic" required maxlength="50"/>
+        <span asp-validation-for="Patronymic" ></span>
+    </div>
+    <div>
+        <label asp-for="TimeZoneId">@Localizer["TimeZone"]</label><br />
+        <select asp-for="TimeZoneId" asp-items="@(new SelectList(TimeZoneInfo.GetSystemTimeZones().Select(x=>x.Id)))"></select><br />
+    </div>
+    <div>
+        <label asp-for="Language">@Localizer["Language"]</label><br />
+        <select asp-for="Language" asp-items="@(new SelectList(LocOptions.Value.SupportedUICultures.Select(x=>x.Name)))"></select><br />
+    </div>
+    <div>
+        <label asp-for="Password">@Localizer["Password"]</label><br />
+        <input asp-for="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm">@Localizer["PasswordConfirm"]</label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value="@Localizer["Reg"]" />
+    </div>
+</form>
+

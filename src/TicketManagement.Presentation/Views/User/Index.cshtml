@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model IEnumerable<TicketManagement.Presentation.IdentityData.User>
+
+<table class="table bg-white">
+    <tr><th>@Localizer["Email"]</th><th>@Localizer["Surname"]</th><th>@Localizer["Name"]</th><th>@Localizer["Patronymic"]</th><th>@Localizer["Year"]</th><th>@Localizer["TimeZone"]</th><th>@Localizer["Language"]</th><th>@Localizer["Balance"]</th><th>@Localizer["Actions"]</th></tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@user.Surname</td>
+            <td>@user.Name</td>
+            <td>@user.Patronymic</td>
+            <td>@user.Year</td>
+            <td>@user.TimeZoneId</td>
+            <td>@user.Language</td>
+            <td>@user.Balance</td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                    <a class="btn btn-sm btn-outline-dark" asp-action="Edit" asp-route-id="@user.Id">@Localizer["Change"]</a>
+                    <a class="btn btn-sm btn-outline-dark" asp-action="ChangePassword" asp-route-id="@user.Id">@Localizer["ChangePassword"]</a>
+                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                        @Localizer["Delete"]
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

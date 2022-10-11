@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<TicketManagement.Presentation.Models.AreaViewModel>
+<div class="btn btn-dark"><a class="text-white" asp-action="Create">@Localizer["AddArea"]</a></div>
+
+<table class="table bg-white">
+    <tr><td>@Localizer["CoordinateX"]</td><td>@Localizer["CoordinateY"]</td><td>@Localizer["Description"]</td><td>@Localizer["Layout"]</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CoordX</td>
+            <td>@item.CoordY</td>
+            <td>@item.Description</td>
+            <td>@item.LayoutName</td>
+            <td>
+                <div class="btn btn-dark"><a class="text-white" asp-action="Edit" asp-controller="Area" asp-route-id="@item.Id">@Localizer["Change"]</a></div>
+                <div class="btn btn-outline-danger"><a class="text-dark" asp-action="Delete" asp-controller="Area" asp-route-id="@item.Id">@Localizer["Delete"]</a></div>
+                <div class="btn btn-dark"><a class="text-white" asp-action="Index" asp-controller="Seat" asp-route-id="@item.Id">@Localizer["Seats"]</a></div>
+            </td>
+        </tr>
+    }
+</table>

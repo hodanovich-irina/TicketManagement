@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model List<TicketManagement.Presentation.Models.SeatViewModel>
+<div><a class="btn btn-dark" asp-action="Create">@Localizer["AddSeat"]</a></div>
+<br>
+@foreach (var item in Model)
+{
+    <div class="d-inline-block">
+        <div>
+
+            <div class="container py-5 text-center">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal">
+                    <h6>@Localizer["Row"]: @item.Row @Localizer["Place"]: @item.Number</h6>
+                </button><br>
+                <div class="btn btn-light"><a class="text-dark" asp-action="Edit" asp-controller="seat" asp-route-id="@item.Id">@Localizer["Change"]</a></div><br>
+                <div class="btn btn-outline-danger"><a class="text-danger" asp-action="Delete" asp-controller="seat" asp-route-id="@item.Id">@Localizer["Delete"]</a></div><br>
+            </div>
+
+            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">@Localizer["Information"]:</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-1">
+                                <dl class="dl-horizontal">
+                                    <dt>@Localizer["Layout"]:</dt>
+                                    <dd>@item.LayoutName</dd>
+
+                                    <dt>@Localizer["AreaCoordinateX"]:</dt>
+                                    <dd>@item.AreaX</dd>
+
+                                    <dt>@Localizer["AreaCoordinateY"]:</dt>
+                                    <dd>@item.AreaY</dd>
+
+                                </dl>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["Close"]</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

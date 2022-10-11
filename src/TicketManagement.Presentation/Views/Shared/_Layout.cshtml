@@ -1,0 +1,110 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@using System.Security.Claims;
+@{ var role = ((ClaimsIdentity)User.Identity).Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] @Localizer["TicketManagement"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["TicketManagement"]</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Events"]</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    @await Html.PartialAsync("_SelectLanguagePartial")
+                </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="nav-link text-dark">@User.Identity.Name</div>
+                    <form class="nav-link text-dark"  method="post" asp-controller="Account" asp-action="Logout">
+                        <input class="btn btn-light" type="submit" value="@Localizer["Exit"]" />
+                    </form>
+                }
+                else
+                {
+            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">@Localizer["Enter"]</a>
+            <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">@Localizer["Registration"]</a>
+                }
+            </div>
+        </nav>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">@Localizer["Users"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">@Localizer["UserRoles"]</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("venueManager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Venue" asp-action="Index">@Localizer["Venues"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">@Localizer["Users"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">@Localizer["UserRoles"]</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("eventManager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Ticket" asp-action="Index">@Localizer["Tickets"]</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ThirdPartyImport" asp-action="Index">@Localizer["ImportFile"]</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("user"))
+                        {
+                            <li li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="Index">@Localizer["PersonalArea"]</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+        }
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-white">
+        <div class="container">
+            &copy; 2022 - @Localizer["TicketManagement"]
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

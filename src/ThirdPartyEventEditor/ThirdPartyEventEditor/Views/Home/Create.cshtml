@@ -1,0 +1,45 @@
+﻿@model ThirdPartyEventEditor.Models.ThirdPartyEvent
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>Create event</h2>
+<form method="post" asp-action="Create" asp-controller="Home">
+
+        <div class="form-group">
+            <input type="hidden" name="Id" value="0" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input type="text" name="Name" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <input type="text" name="Description" required maxlength="250" />
+        </div>
+        <div class="form-group">
+            <label asp-for="StartDate">StartDate</label>
+            <input type="date" name="StartDate" required />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="EndDate">EndDate</label>
+            <input type="date" name="EndDate" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="PosterImage">PosterImage</label>
+            <input type="file" name="PosterImage" accept="image/png">
+        </div>
+        <div class="form-group">
+            <label asp-for="LayoutName">LayoutName</label>
+            <input type="text" name="LayoutName" required />
+        </div>
+        <div class="form-group">
+            <label asp-for="VenueName">VenueName</label>
+            <input type="text" name="VenueName" required />
+        </div>
+        <div class="form-group">
+            <input class="btn btn-dark" type="submit" value="create" />
+        </div>
+</form>

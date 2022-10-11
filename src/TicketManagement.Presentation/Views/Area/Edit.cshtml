@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.AreaViewModel
+<form asp-action="edit" asp-controller="area" asp-route-id="@Model.Id">
+    <div style="display:none;">
+        <label asp-for="Id"></label>
+        <input type="number" asp-for="Id" value="@Model.Id" />
+    </div>
+    <div>
+        <label asp-for="CoordX">@Localizer["CoordinateX"]:</label>
+        <input type="number" asp-for="CoordX" required min="1"  max="10000"/>
+    </div>
+    <div>
+        <label asp-for="CoordY">@Localizer["CoordinateY"]:</label>
+        <input type="number" asp-for="CoordY" required min="1"  max="10000"/>
+    </div>
+    <div>
+        <label asp-for="Description">@Localizer["Description"]</label>
+        <input type="text" asp-for="Description" required maxlength="250"/>
+    </div>
+    <div>
+        <label asp-for="LayoutId">@Localizer["Layout"]</label>
+        <select asp-for="LayoutId" asp-items="@(new SelectList(Model.Layouts, "Id", "Name", Model.Layouts.FirstOrDefault(x => x.Id == Model.LayoutId).Name))"></select><br />
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value="@Localizer["Save"]" />
+    </div>
+</form>

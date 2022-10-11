@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localize
+@model TicketManagement.Presentation.Models.EventCreateViewModel
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Localize["Name"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>@Localize["Description"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>@Localize["Layout"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.LayoutName)
+        </dd>
+        <dt>@Localize["ShowTime"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShowTime)
+        </dd>
+        <dt>@Localize["DateStart"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateStart)
+        </dd>
+        <dt>@Localize["DateEnd"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateEnd)
+        </dd>
+        <dt>@Localize["URL"]</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="home" asp-action="Delete" method="post">
+            <div>
+                <input class="btn btn-dark" type="submit" value="@Localize["Delete"]" />
+            </div>
+        </form>
+    </div>
+</div>

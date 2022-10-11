@@ -1,0 +1,378 @@
+Time: 2174ms controller: Home action: Index
+Time: 3730ms controller: Home action: Index
+Time: 600ms controller: Home action: Edit
+Time: 2282ms controller: Home action: Index
+Time: 152ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 18:15:33Time: 2548ms controller: Home action: Index
+Time: 76ms controller: Home action: Index
+Time: 527ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 18:26:24Time: 2183ms controller: Home action: Index
+Time: 200ms controller: Home action: FileImport
+Time: 88ms controller: Home action: Index
+Time: 140ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 18:28:52Time: 2074ms controller: Home action: Index
+Time: 261ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 18:35:52Time: 3141ms controller: Home action: Index
+Time: 163ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 18:49:56Time: 4973ms controller: Home action: Index
+Time: 288ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 19:02:47Time: 165ms controller: Home action: ShowError
+Time: 2827ms controller: Home action: Index
+Time: 141ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 19:05:41Time: 47ms controller: Home action: ShowError
+Time: 2382ms controller: Home action: Index
+Time: 167ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 19:07:06Time: 47ms controller: Home action: ShowError
+Time: 3372ms controller: Home action: Index
+Time: 142ms controller: Home action: Edit
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 19:09:00Time: 43ms controller: Home action: ShowError
+Time: 57ms controller: Home action: Index
+Time: 81ms controller: Home action: Details
+Time: 99ms controller: Home action: FileImport
+Time: 40ms controller: Home action: Index
+Time: 75ms controller: Home action: Details
+Time: 44ms controller: Home action: Index
+Time: 176ms controller: Home action: FileImport
+Time: 8225ms controller: Home action: Index
+Time: 410ms controller: Home action: Details
+Time: 185ms controller: Home action: Index
+Time: 523ms controller: Home action: Edit
+Time: 524ms controller: Home action: Index
+Time: 263ms controller: Home action: Create
+Time: 196ms controller: Home action: Index
+Time: 549ms controller: Home action: FileImport
+Time: 392ms controller: Home action: FileImport
+Time: 156ms controller: Home action: Index
+Time: 193ms controller: Home action: FileImport
+Time: 97ms controller: Home action: FileImport
+Time: 109ms controller: Home action: Index
+Time: 158ms controller: Home action: FileImport
+Возникло исключение: FileStream не открывает устройства Win32, такие как логические диски и ленточные накопители. Избегайте использования "\\.\" в пути. действие: FileImport контроллер: Home время:18.02.2022 19:14:03Time: 243ms controller: Home action: ShowError
+Time: 193ms controller: Home action: FileImport
+Time: 117ms controller: Home action: FileImport
+Time: 212ms controller: Home action: Index
+Time: 13ms controller: Home action: Create
+Time: 4263ms controller: Home action: Index
+Time: 2806ms controller: Home action: Index
+Time: 102ms controller: Home action: Create
+Time: 164ms controller: Home action: Create
+Time: 129ms controller: Home action: Index
+Time: 5797ms controller: Home action: Index
+Time: 4532ms controller: Home action: Index
+Time: 230ms controller: Home action: Edit
+Time: 37ms controller: Home action: Index
+Time: 24ms controller: Home action: Edit
+Time: 51ms controller: Home action: Index
+Time: 87ms controller: Home action: Details
+Time: 22ms controller: Home action: Edit
+Time: 30ms controller: Home action: Details
+Time: 40ms controller: Home action: Index
+Time: 204ms controller: Home action: Delete
+Time: 43ms controller: Home action: Index
+Time: 25ms controller: Home action: Details
+Time: 42ms controller: Home action: Index
+Time: 30ms controller: Home action: Delete
+Time: 138ms controller: Home action: Index
+Time: 53ms controller: Home action: Create
+Time: 4879ms controller: Home action: Create
+Time: 4093ms controller: Home action: Create
+Time: 423ms controller: Home action: Create
+Time: 226ms controller: Home action: Index
+Time: 225ms controller: Home action: Edit
+Time: 56ms controller: Home action: Index
+Time: 2ms controller: Home action: Create
+Возникло исключение: Файл 'D:\training\IrynaKhadanovich\src\ThirdPartyEventEditor\ThirdPartyEventEditor\App_Data\1.png' не найден. действие: Create контроллер: Home время:18.02.2022 22:53:40Time: 49ms controller: Home action: ShowError
+Time: 1ms controller: Home action: Create
+Time: 81ms controller: Home action: Create
+Time: 169ms controller: Home action: Index
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult ConfirmDelete(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Delete контроллер: Home время:18.02.2022 23:00:07Time: 1481ms controller: Home action: ShowError
+Time: 2150ms controller: Home action: Index
+Time: 4120ms controller: Home action: Edit
+Возникло исключение: Файл 'D:\training\IrynaKhadanovich\src\ThirdPartyEventEditor\ThirdPartyEventEditor\App_Data\film.png' не найден. действие: Edit контроллер: Home время:18.02.2022 23:03:29Time: 43ms controller: Home action: ShowError
+Time: 27ms controller: Home action: Edit
+Time: 101ms controller: Home action: Edit
+Time: 228ms controller: Home action: Index
+Time: 2515ms controller: Home action: Index
+Time: 2442ms controller: Home action: Index
+Time: 321ms controller: Home action: Edit
+Возникло исключение: Файл 'D:\training\IrynaKhadanovich\src\ThirdPartyEventEditor\ThirdPartyEventEditor\film.png' не найден. действие: Edit контроллер: Home время:18.02.2022 23:05:46Time: 40ms controller: Home action: ShowError
+Time: 33ms controller: Home action: Edit
+Time: 2290ms controller: Home action: Index
+Time: 295ms controller: Home action: Edit
+Time: 369ms controller: Home action: Edit
+Time: 40ms controller: Home action: Index
+Time: 31ms controller: Home action: Edit
+Time: 179ms controller: Home action: Edit
+Time: 40ms controller: Home action: Index
+Возникло исключение: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Edit(Int32)' in 'ThirdPartyEventEditor.Controllers.HomeController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Имя параметра: parameters действие: Edit контроллер: Home время:18.02.2022 23:33:57Time: 3425ms controller: Home action: ShowError
+Time: 379ms controller: Home action: Index
+Time: 188ms controller: Home action: Edit
+Time: 133ms controller: Home action: Index
+Time: 87ms controller: Home action: Edit
+Time: 105ms controller: Home action: FileImport
+Time: 2466ms controller: Home action: Index
+Time: 7686ms controller: Home action: Index
+Time: 183ms controller: Home action: Create
+Time: 124ms controller: Home action: Create
+Time: 133ms controller: Home action: Index
+Time: 564ms controller: Home action: Edit
+Time: 134ms controller: Home action: Edit
+Time: 134ms controller: Home action: Index
+Time: 2960ms controller: Home action: Index
+Time: 251ms controller: Home action: Edit
+Time: 293ms controller: Home action: Edit
+Time: 249ms controller: Home action: Index
+Time: 23ms controller: Home action: Edit
+Time: 2462ms controller: Home action: Index
+Time: 383ms controller: Home action: Edit
+Time: 2688ms controller: Home action: Index
+Time: 281ms controller: Home action: Edit
+Возникло исключение: You can't create event in the past and when start date more than end date действие: Edit контроллер: Home время:19.02.2022 21:32:03Time: 46ms controller: Home action: ShowError
+Time: 221ms controller: Home action: Edit
+Time: 69ms controller: Home action: Index
+Time: 65ms controller: Home action: Create
+Time: 3006ms controller: Home action: Index
+Time: 2032ms controller: Home action: Index
+Time: 159ms controller: Home action: Edit
+Time: 4335ms controller: Home action: Index
+Time: 396ms controller: Home action: Edit
+Возникло исключение: You can't create event in the past and when start date more than end date действие: Edit контроллер: Home время:19.02.2022 21:58:43Time: 51ms controller: Home action: ShowError
+Time: 311ms controller: Home action: Edit
+Возникло исключение: You can't create event in the past and when start date more than end date действие: Edit контроллер: Home время:19.02.2022 21:58:59Time: 0ms controller: Home action: ShowError
+Time: 29ms controller: Home action: Edit
+Time: 58ms controller: Home action: Index
+Time: 85ms controller: Home action: Edit
+Time: 112ms controller: Home action: Index
+Time: 85ms controller: Home action: Edit
+Time: 4885ms controller: Home action: Index
+Time: 53ms controller: Home action: Create
+Time: 86ms controller: Home action: Index
+Time: 245ms controller: Home action: Edit
+Time: 68ms controller: Home action: Index
+Time: 117ms controller: Home action: Details
+Time: 66ms controller: Home action: Index
+Time: 212ms controller: Home action: FileImport
+Time: 135ms controller: Home action: FileImport
+Time: 59ms controller: Home action: Index
+Time: 6413ms controller: Home action: Index
+Time: 165ms controller: Home action: Delete
+Time: 116ms controller: Home action: Delete
+Time: 97ms controller: Home action: Index
+Time: 184ms controller: Home action: Edit
+Time: 74ms controller: Home action: Index
+Time: 37ms controller: Home action: Edit
+Time: 52ms controller: Home action: Index
+Time: 26ms controller: Home action: Edit
+Time: 48ms controller: Home action: Index
+Time: 23ms controller: Home action: Edit
+Time: 46ms controller: Home action: Index
+Time: 38ms controller: Home action: Edit
+Time: 57ms controller: Home action: Index
+Time: 25ms controller: Home action: Edit
+Time: 43ms controller: Home action: Index
+Time: 26ms controller: Home action: Edit
+Time: 43ms controller: Home action: Index
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: Index контроллер: Home время:20.02.2022 18:57:01Time: 45ms controller: Home action: ShowError
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: Index контроллер: Home время:20.02.2022 18:57:03Time: 0ms controller: Home action: ShowError
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: Index контроллер: Home время:20.02.2022 18:57:04Time: 0ms controller: Home action: ShowError
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: Index контроллер: Home время:20.02.2022 18:57:29Time: 1069ms controller: Home action: ShowError
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: Index контроллер: Home время:20.02.2022 19:02:13Time: 900ms controller: Home action: ShowError
+Возникло исключение: '0x0D' is invalid within a JSON string. The string should be correctly escaped. Path: $[0].Description | LineNumber: 5 | BytePositionInLine: 133. действие: FileImport контроллер: Home время:20.02.2022 19:02:19Time: 0ms controller: Home action: ShowError
+Time: 2965ms controller: Home action: Index
+Time: 67ms controller: Home action: Delete
+Time: 46ms controller: Home action: Delete
+Time: 2ms controller: Home action: Index
+Time: 4ms controller: Home action: Delete
+Time: 3ms controller: Home action: Delete
+Time: 2ms controller: Home action: Index
+Time: 13ms controller: Home action: Delete
+Time: 2ms controller: Home action: Delete
+Time: 1ms controller: Home action: Index
+Time: 2085ms controller: Home action: Index
+Time: 53ms controller: Home action: Create
+Time: 2755ms controller: Home action: Index
+Time: 53ms controller: Home action: Create
+Time: 2090ms controller: Home action: Index
+Time: 52ms controller: Home action: Create
+Time: 94ms controller: Home action: Create
+Time: 136ms controller: Home action: Index
+Time: 135ms controller: Home action: Edit
+Time: 10ms controller: Home action: Edit
+Time: 9ms controller: Home action: Index
+Time: 2ms controller: Home action: Create
+Time: 82ms controller: Home action: Create
+Time: 46ms controller: Home action: Index
+Time: 2ms controller: Home action: Create
+Time: 77ms controller: Home action: Create
+Time: 69ms controller: Home action: Index
+Time: 1ms controller: Home action: Create
+Time: 40ms controller: Home action: Create
+Time: 86ms controller: Home action: Index
+Time: 1ms controller: Home action: Create
+Time: 67ms controller: Home action: Create
+Time: 96ms controller: Home action: Index
+Time: 2ms controller: Home action: Create
+Time: 52ms controller: Home action: Create
+Time: 110ms controller: Home action: Index
+Time: 109ms controller: Home action: FileImport
+Time: 51ms controller: Home action: FileImport
+Time: 46ms controller: Home action: Index
+Time: 62ms controller: Home action: FileImport
+Time: 196ms controller: Home action: FileImport
+Time: 51ms controller: Home action: Index
+Time: 2143ms controller: Home action: Index
+Time: 74ms controller: Home action: Details
+Time: 57ms controller: Home action: Index
+Time: 26ms controller: Home action: Details
+Time: 171ms controller: Home action: Edit
+Time: 2415ms controller: Home action: Index
+Time: 209ms controller: Home action: Edit
+Time: 2348ms controller: Home action: Index
+Time: 47ms controller: Home action: Index
+Time: 122ms controller: Home action: FileImport
+Time: 211ms controller: Home action: FileImport
+Time: 45ms controller: Home action: Index
+Time: 55ms controller: Home action: Create
+Time: 49ms controller: Home action: FileImport
+Time: 112ms controller: Home action: FileImport
+Time: 44ms controller: Home action: Index
+Time: 3426ms controller: Home action: Index
+Time: 50ms controller: Home action: Create
+Возникло исключение: You can't create event in the past and when start date more than end date действие: Create контроллер: Home время:20.02.2022 20:32:15
+Time: 39ms controller: Home action: ShowError
+Time: 159ms controller: Home action: Index
+Time: 85ms controller: Home action: Index
+Time: 6335ms controller: Home action: Index
+Time: 132ms controller: Home action: FileImport
+Time: 61ms controller: Home action: Create
+Time: 250ms controller: Home action: FileImport
+Time: 4ms controller: Home action: FileImport
+Time: 120ms controller: Home action: Index
+Time: 74ms controller: Home action: FileImport
+Time: 0ms controller: Home action: FileImport
+Time: 97ms controller: Home action: Index
+Time: 235ms controller: Home action: Delete
+Time: 54ms controller: Home action: Index
+Time: 204ms controller: Home action: Edit
+Time: 54ms controller: Home action: Index
+Time: 1ms controller: Home action: Create
+Time: 48ms controller: Home action: Index
+Time: 31ms controller: Home action: Delete
+Time: 3821ms controller: Home action: Index
+Time: 56ms controller: Home action: Create
+Time: 80ms controller: Home action: Index
+Time: 0ms controller: Home action: Create
+Time: 49ms controller: Home action: Index
+Time: 1788ms controller: Home action: Index
+Time: 3164ms controller: Home action: Create
+Time: 177ms controller: Home action: Index
+Time: 123ms controller: Home action: Details
+Time: 55ms controller: Home action: Index
+Time: 96ms controller: Home action: Index
+Time: 120ms controller: Home action: FileImport
+Time: 90ms controller: Home action: Index
+Time: 92ms controller: Home action: FileImport
+Time: 46ms controller: Home action: Index
+Time: 53ms controller: Home action: Index
+Time: 58ms controller: Home action: FileImport
+Time: 101ms controller: Home action: Index
+Time: 92ms controller: Home action: FileImport
+Time: 57ms controller: Home action: Index
+Time: 1951ms controller: Home action: Index
+Time: 56ms controller: Home action: Create
+Time: 159ms controller: Home action: Create
+Time: 149ms controller: Home action: Index
+Time: 141ms controller: Home action: Delete
+Time: 51ms controller: Home action: Delete
+Time: 142ms controller: Home action: Index
+Time: 5017ms controller: Home action: Index
+Time: 242ms controller: Home action: FileImport
+Time: 16822ms controller: Home action: Index
+Time: 435ms controller: Home action: Details
+Time: 231ms controller: Home action: Index
+Time: 283ms controller: Home action: FileImport
+Time: 9993ms controller: Home action: Index
+Time: 371ms controller: Home action: FileImport
+Time: 322ms controller: Home action: FileImport
+Time: 141ms controller: Home action: Index
+Time: 4213ms controller: Home action: Index
+Time: 141ms controller: Home action: FileImport
+Time: 83ms controller: Home action: Index
+Time: 3363ms controller: Home action: Index
+Time: 344ms controller: Home action: Create
+Time: 82ms controller: Home action: Index
+Time: 95ms controller: Home action: Index
+Time: 203ms controller: Home action: FileImport
+Time: 2ms controller: Home action: Create
+Time: 111ms controller: Home action: Index
+Time: 1ms controller: Home action: Create
+Time: 80ms controller: Home action: Index
+Time: 346ms controller: Home action: Details
+Time: 49ms controller: Home action: Index
+Time: 3744ms controller: Home action: Index
+Time: 73ms controller: Home action: Create
+Time: 101ms controller: Home action: Index
+Time: 5911ms controller: Home action: Edit
+Time: 71ms controller: Home action: Index
+Time: 1ms controller: Home action: Create
+Time: 198ms controller: Home action: Create
+Time: 374ms controller: Home action: Index
+Time: 305ms controller: Home action: Edit
+Time: 132ms controller: Home action: Edit
+Time: 195ms controller: Home action: Index
+Time: 104ms controller: Home action: Details
+Time: 90ms controller: Home action: Index
+Time: 340ms controller: Home action: Delete
+Time: 74ms controller: Home action: Delete
+Time: 230ms controller: Home action: Index
+Time: 2ms controller: Home action: Create
+Возникло исключение: You can't create event in the past and when start date more than end date действие: Create контроллер: Home время:21.02.2022 18:09:24
+Time: 113ms controller: Home action: ShowError
+Time: 4ms controller: Home action: Create
+Time: 5044ms controller: Home action: Index
+Time: 6295ms controller: Home action: Index
+Time: 251ms controller: Home action: FileImport
+Time: 422ms controller: Home action: FileImport
+Time: 69ms controller: Home action: Index
+Time: 11321ms controller: Home action: Index
+Time: 11377ms controller: Home action: Create
+Time: 11476ms controller: Home action: Index
+Time: 11640ms controller: Home action: FileImport
+Time: 11894ms controller: Home action: FileImport
+Time: 11943ms controller: Home action: Index
+Time: 13725ms controller: Home action: Edit
+Time: 13842ms controller: Home action: Index
+Time: 13904ms controller: Home action: Edit
+Time: 13958ms controller: Home action: Index
+Time: 13989ms controller: Home action: Edit
+Time: 14115ms controller: Home action: Edit
+Time: 14277ms controller: Home action: Index
+Time: 14312ms controller: Home action: Edit
+Time: 14707ms controller: Home action: Edit
+Time: 14878ms controller: Home action: Index
+Time: 3007ms controller: Home action: Index
+Time: 3070ms controller: Home action: Create
+Time: 3155ms controller: Home action: Create
+Time: 3263ms controller: Home action: Index
+Time: 3467ms controller: Home action: Edit
+Time: 3475ms controller: Home action: Index
+Time: 3477ms controller: Home action: Create
+Time: 3574ms controller: Home action: Create
+Time: 3631ms controller: Home action: Index
+Time: 3649ms controller: Home action: Edit
+Time: 3676ms controller: Home action: Index
+Time: 3677ms controller: Home action: Create
+Time: 3723ms controller: Home action: Create
+Time: 3801ms controller: Home action: Index
+Time: 3851ms controller: Home action: Edit

@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@model TicketManagement.Presentation.IdentityData.EditUser
+<form asp-action="edit" asp-controller="UserAccount">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div>
+        <label asp-for="Email" class="control-label">@Localizer["Email"]</label>
+        <input type="text" asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Year" class="control-label">@Localizer["Year"]</label>
+        <input type="number" asp-for="Year" required min="1900"/>
+    </div>
+    <div>
+        <label asp-for="Surname">@Localizer["Surname"]</label>
+        <input type="text" asp-for="Surname" required/>
+    </div>
+    <div>
+        <label asp-for="Name">@Localizer["Name"]</label>
+        <input type="text" asp-for="Name" required/>
+    </div>
+    <div>
+        <label asp-for="Patronymic">@Localizer["Patronymic"]</label>
+        <input type="text" asp-for="Patronymic" required/>
+    </div>
+    <div>
+        <label asp-for="TimeZoneId">@Localizer["TimeZone"]</label>
+        <select asp-for="TimeZoneId" asp-items="@(new SelectList(TimeZoneInfo.GetSystemTimeZones().Select(x=>x.Id)))"></select>
+    </div>
+    <div>
+        <label asp-for="Language">@Localizer["Language"]</label>
+        <select asp-for="Language" asp-items="@(new SelectList(LocOptions.Value.SupportedUICultures.Select(x=>x.Name)))"></select><br />
+    </div>
+    <div>
+        <input type="submit" value="@Localizer["Save"]" class="btn btn-dark" />
+    </div>
+</form>

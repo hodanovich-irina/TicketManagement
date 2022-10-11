@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localize
+@model TicketManagement.Presentation.Models.EventCreateViewModel
+
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+
+    <div style="display:none;">
+        <label asp-for="Id"></label>
+        <input type="number" asp-for="Id" value="@Model.Id" />
+    </div>
+    <div>
+        <label asp-for="Name">@Localize["Name"]:</label>
+        <input type="text" asp-for="Name" required maxlength="100"/>
+    </div>
+    <div>
+        <label asp-for="Description">@Localize["Description"]</label>
+        <input type="text" asp-for="Description" required maxlength="250"/>
+    </div>
+    <div>
+        <label asp-for="ShowTime">@Localize["ShowTime"]</label>
+        <input type="time" asp-for="ShowTime" required />
+    </div>
+    <div>
+        <label asp-for="DateStart">@Localize["DateStart"]</label>
+        <input type="date" asp-for="DateStart" required />
+    </div>
+    <div>
+        <label asp-for="DateEnd">@Localize["DateEnd"]</label>
+        <input type="date" asp-for="DateEnd" required />
+    </div>
+    <div>
+        <label asp-for="ImageURL">@Localize["URL"]</label>
+        <input type="text" asp-for="ImageURL" required />
+    </div>
+    <div style="display:none;">
+        <label asp-for="LayoutId">@Localize["Layout"]</label>
+        <select asp-for="LayoutId" asp-items="@(new SelectList(Model.Layouts, "Id", "Name", Model.Layouts.FirstOrDefault(x => x.Id == Model.LayoutId).Name))"></select><br />
+    </div>
+    <div>
+        <input class="btn btn-dark" type="submit" value="@Localize["Save"]" />
+    </div>
+</form>

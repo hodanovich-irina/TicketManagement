@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model TicketManagement.Presentation.Models.TicketViewModel
+@{
+    ViewBag.Title = "Покупка билета";
+}
+@if (Model.UserBalance <= Model.Price)
+{
+    <h2>@Localizer["TicketMessage"]</h2>
+}
+else
+{
+    <form asp-action="create" asp-controller="ticket">
+         <input readonly type="hidden" asp-for="Id" value="@Model.Id" /> 
+        <div>
+            <label asp-for="Price">@Localizer["Price"]:</label>
+            <input readonly type="text" asp-for="Price" value="@Model.Price" /> $
+        </div>
+        <div style="display:none;">
+            <label asp-for="UserId"></label>
+            <input type="text" asp-for="UserId" value="@Model.UserId" />
+        </div>
+        <div>
+            <label asp-for="DateOfPurchase">@Localizer["DateOfPurchase"]:</label>
+            <input readonly type="text" asp-for="DateOfPurchase" value="@Model.DateOfPurchase" />
+        </div>
+        <div>
+            <label asp-for="EventName">@Localizer["Event"]:</label>
+            <input readonly type="text" value="@Model.EventName" />
+        </div>
+        <div>
+            <label asp-for="EventDateEnd">@Localizer["EventPeriod"]</label>
+            <input readonly type="text" value="@Model.EventDateStart.ToShortDateString() - @Model.EventDateEnd.ToShortDateString()" />
+        </div>
+
+        <div style="display:none;">
+            <label asp-for="EventSeatId"></label>
+            <input type="text" asp-for="EventSeatId" value="@Model.EventSeatId" />
+        </div>
+        <div>
+            <input class="btn btn-dark" type="submit" value="@Localizer["Buy"]" />
+        </div>
+    </form>
+}

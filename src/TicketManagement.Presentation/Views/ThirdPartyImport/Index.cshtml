@@ -1,0 +1,7 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<h3>@Localizer["SelectMes"]</h3>
+<form asp-action="index" asp-controller="ThirdPartyImport" method="post" enctype="multipart/form-data">
+    <div><input class="form-control form-control-lg" id="formFileLg" accept=".json" type="file" name="uploadedFile" required /></div><br>
+    <input type="submit" class="btn-dark" value="@Localizer["Download"]" />
+</form>

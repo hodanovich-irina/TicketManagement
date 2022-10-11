@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Identity;
+@using TicketManagement.Presentation.IdentityData;
+@using Microsoft.AspNetCore.Hosting;
+@inject IViewLocalizer Localizer
+@inject IWebHostEnvironment hostEnviroment
+@using System.Security.Claims;
+@model List<TicketManagement.Presentation.Models.EventViewModel>
+<div class="text-center">
+    <h1 class="display-4">@Localizer["Events"]</h1>
+    <p>@Localizer["EventMessage"]</p>
+    @if (User.IsInRole("eventManager"))
+    {
+        <div class="btn btn-dark"><a class="text-white" asp-action="Create">@Localizer["AddEvent"]</a></div>
+    }
+</div>
+@foreach (var item in Model)
+{
+    <div class="d-inline-block">
+        <div class="modal-content h-100 w-100">
+            <div class="modal-header">
+                <h6><img height="450" width="300" src="@item.ImageURL" /></h6>
+            </div>
+            <div class="modal-body">
+                <dl class="dl-horizontal">
+                    <dt>@Localizer["Name"]:</dt>
+                    <dd>@item.Name</dd>
+
+                    <dt>@Localizer["Description"]:</dt>
+                    <dd>@item.Description</dd>
+
+                    <dt>@Localizer["ShowTime"]:</dt>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        var time = new DateTime(item.DateStart.Year, item.DateStart.Month, item.DateStart.Day, item.ShowTime.Hours, item.ShowTime.Minutes, item.ShowTime.Seconds);
+                        var showtime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(time, ViewData["TimeZone"].ToString()).ToShortTimeString();
+                        <dd>@showtime</dd>
+
+                    }
+                    else
+                    {
+                        <dd>@item.ShowTime</dd>
+                    }
+                    <dt>@Localizer["ShowPeriod"]:</dt>
+                    <dd>@item.DateStart.ToShortDateString() - @item.DateEnd.ToShortDateString()</dd>
+
+                    <dt>@Localizer["VenueLayout"]:</dt>
+                    <dd>@item.VenueName</dd>
+                    @if (User.Identity.IsAuthenticated && (User.IsInRole("eventManager") || User.IsInRole("user")))
+                    {
+                        <dt>@Localizer["Actions"]:</dt>
+                        <dd>
+                            @if (User.IsInRole("eventManager"))
+                            {
+                                <div class="btn btn-dark"><a class="text-light" asp-action="Edit" asp-controller="home" asp-route-id="@item.Id">@Localizer["Change"]</a></div>
+                                <div class="btn btn-outline-danger"><a class="text-dark" asp-action="Delete" asp-controller="home" asp-route-id="@item.Id">@Localizer["Delete"]</a></div><br>
+                                <div class="btn btn-dark"><a class="text-white" asp-action="Index" asp-controller="EventArea" asp-route-id="@item.Id">@Localizer["TicketInformation"]</a></div>
+                            }
+                            @if (User.IsInRole("user") && (item.DateEnd - DateTime.Now).Days > 0)
+                            {
+                                <div class="btn btn-dark"><a class="text-white" asp-action="Index" asp-controller="EventArea" asp-route-id="@item.Id">@Localizer["BuyTicket"]</a></div>
+                            }
+                        </dd>
+                    }
+                </dl>
+            </div>
+        </div>
+    </div>
+}
